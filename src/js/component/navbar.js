@@ -8,13 +8,15 @@ export const Navbar = () => {
 
 	return (
 		
-		<nav className="navbar navbar-light mb-3 bg-image">
-			<div className="container-fluid">
+		<nav className="navbar navbar-light mb-3 bg-image" >
+			<div className="container-fluid" style={{ 
+			backgroundImage: 'url:("https://blog.canaltnt.es/wp-content/uploads/2020/04/rym_blog.jpg")'
+		  }}>
 
 				<Link to="/">
-					<span className="navbar-link">Home</span>
+					<span className="navbar-link" id="navbar-link">Home</span>
 				</Link>
-				<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/694px-Star_Wars_Logo.svg.png" />
+				<img src="https://blog..es/wp-content/uploads/2020/04/rym_blog.jpg" />
 				<div className="ml-auto">
 					<Link to="/demo">
 						<button className="btn btn-primary">Check the Context in action</button>

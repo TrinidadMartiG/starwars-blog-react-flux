@@ -1,5 +1,8 @@
 nav img{
-    width: 200px;
-    height: 200px;
-    object-fit:scale-down;
+    background-image: url("https://blog.canaltnt.es/wp-content/uploads/2020/04/rym_blog.jpg");
+  
+}
+
+#navbar-link {
+        color: white;
 }

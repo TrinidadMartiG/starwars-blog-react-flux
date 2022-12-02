@@ -1,48 +1,54 @@
 import React, { useEffect, useState, useContext } from "react";
-import { useInRouterContext } from "react-router";
-import { Link } from "react-router-dom";
 import "../../styles/home.css";
 import { Context } from "../store/appContext";
-import Characters from "./Characters";
+import { Link } from "react-router-dom";
+
 
 
 export const Home = () => {
 	const { store, actions } = useContext(Context)
 
-	useEffect(() => { }, [])
-	console.log('consolelog store people', store.vehicles)
-	console.log('consolelog store people', store.planets)
-	console.log('consolelog store people', store.species)
-
+	console.log('consolelog store people', store.people)
 
 	return (
-		<div className="container-flex text-center m-5 bg-dark">
-			
-			<div className="row justify-content-center border border-warning">
-				<div className="col-2 border border-danger">
-					<div className="card border" style={{ width: 350 }}>
-						<img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/star-wars-characters-ranked-1577122930.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*" className="card-img-top" alt="..." />
+		<div className="container-fluid text-center bg-dark">
+
+			<div className="row m-5">
+				<div className="col justify-content-center my-5">
+					<div className="card h-100" >
+						<img src="https://blog.personal.com.py/wp-content/uploads/2020/09/los-3-mejores-episodios-de-Rick-y-Morty.jpg" className="card-img-top" alt="..."
+							width="250"
+							height="350" />
 						<div className="card-body">
 							<h5 className="card-title">Characters</h5>
-							<p className="card-text">Do you feel the force?</p>
-							<a href="#" className="btn btn-primary"></a>
+							<p className="card-text">“Sometimes science is more art than science.” — Rick</p>
+							<Link to="/Characters">
+								<button type="button" class="btn btn-primary">Primary</button>
+							</Link>
+
 						</div>
 					</div>
 				</div>
-				<div className="col-2 border border-danger">
-					<div className="card border border-warning" style={{ width: 350 }}>
-						<img src="https://i.pinimg.com/originals/50/31/ce/5031ce529b1f247a7070d9d64cf05fa0.jpg" className="card-img-top" alt="..." />
+				<div className="col justify-content-center my-5">
+					<div className="card h-100" >
+						<img src="https://i.pinimg.com/originals/50/31/ce/5031ce529b1f247a7070d9d64cf05fa0.jpg"
+							width="250"
+							height="350"
+							className="card-img-top" alt="..." />
 						<div className="card-body">
 							<h5 className="card-title">Vehicles</h5>
 							<p className="card-text">Look at that speeder...</p>
-							<a href="#" className="btn btn-primary"></a>
+							<Link to="/Vehicles">
+								<button type="button" class="btn btn-primary">Primary</button>
+							</Link>
+
 						</div>
 					</div>
 				</div>
 			</div>
-			<div className="row justify-content-center">
-				<div className="col-2">
-					<div className="card border border-warning" style={{ width: 350 }}>
+			<div className="row m-5">
+				<div className="col justify-content-center">
+					<div className="card h-100" >
 						<img src="..." className="card-img-top" alt="..." />
 						<div className="card-body">
 							<h5 className="card-title">Characters</h5>
@@ -51,8 +57,8 @@ export const Home = () => {
 						</div>
 					</div>
 				</div>
-				<div className="col-2">
-					<div className="card border border-warning" style={{ width: 350 }}>
+				<div className="col justify-content-center">
+					<div className="card h-100" >
 						<img src="https://i.pinimg.com/originals/50/31/ce/5031ce529b1f247a7070d9d64cf05fa0.jpg" className="card-img-top" alt="..." />
 						<div className="card-body">
 							<h5 className="card-title">Vehicles</h5>

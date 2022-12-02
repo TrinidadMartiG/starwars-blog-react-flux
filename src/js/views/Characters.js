@@ -1,29 +1,35 @@
 import React, { useEffect, useState, useContext } from "react";
 import { Context } from "../store/appContext";
+import { Link } from "react-router-dom";
+import "../../styles/characters.css";
 
-let Characters = ({characters=[]}) => {
-    const {store, actions} = useContext(Context)
-    console.log('store.people', store.people)
-    
+
+let Characters = ({ characters = [] }) => {
+    const { store, actions } = useContext(Context)
+
     return (
-        <div className="row">
-            {characters.map((item,index)=>(
-            <div className="col-4 mb-4">
-                <div key={index} className="card">
-                    <img /* src="https://starwars-visualguide.com/assets/img/characters/.jpg */ className="card-img-top" alt="..." />
-                    <div className="card-body">
-                        <h4 className="card-tittle">{item.name}</h4>
-                        <hr />
-                        <p className="card-text">
-                            Gender: {item.gender} 
-                            <hr />
-                            {item.vehicles}
-                        </p>
+            <Link to="/CharacterSingle/{index}" style={{textDecoration: 'none'}}>
+   
+        <div className="row m-5">
+            {/* !! evalua si store es nullo o no, si es nullo continua && el ? verifica si  */}
+                {!!store.people && store.people.results?.length > 0 && store.people.results.map((item, index) => (
+                    <div className="col-4 mb-3">
+                        <div key={index} className="card">
+                            <img src={item.image} className="card-img-top" alt="..." />
+                            <div className="card-body">
+                                <h4 className="card-tittle">{item.name}</h4>
+                                <hr />
+                                <p className="card-text">
+                                    <p>Gender: {item.gender}</p>
+                                    <p>Status: {item.status}</p>
+                                    <hr />
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
             ))}
         </div>
+            </Link>
     )
 };
 
