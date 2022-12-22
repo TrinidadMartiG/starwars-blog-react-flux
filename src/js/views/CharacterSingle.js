@@ -10,7 +10,6 @@ let CharacterSingle = () => {
         </Link>
         {
         characters((item, index) => (
-
             <div className="col-6 mb-4">
                 <div key={index} className="card">
                     <img /* src="https://starwars-visualguide.com/assets/img/characters/.jpg */ className="card-img-top" alt="..." />

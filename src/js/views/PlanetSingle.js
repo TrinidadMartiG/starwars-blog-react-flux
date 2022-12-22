@@ -1,18 +1,13 @@
 import React, { useEffect, useState, useContext } from "react";
 import { Context } from "../store/appContext";
-import { Link } from "react-router-dom";
-import "../../styles/characters.css";
 
-
-let Characters = ({ characters = [] }) => {
+let PlanetSingle = ({ planets = [] }) => {
     const { store, actions } = useContext(Context)
 
     return (
-            <Link to="/CharacterSingle/{index}" style={{textDecoration: 'none'}}>
-   
         <div className="row m-5">
             {/* !! evalua si store es nullo o no, si es nullo continua && el ? verifica si  */}
-                {!!store.people && store.people.results?.length > 0 && store.people.results.map((item, index) => (
+                {!!store.planets && store.planets.results?.length > 0 && store.planets.results.map((item, index) => (
                     <div className="col-4 mb-3">
                         <div key={index} className="card">
                             <img src={item.image} className="card-img-top" alt="..." />
@@ -31,8 +26,7 @@ let Characters = ({ characters = [] }) => {
                     </div>
             ))}
         </div>
-            </Link>
     )
 };
 
-export default Characters;
+export default PlanetSingle;

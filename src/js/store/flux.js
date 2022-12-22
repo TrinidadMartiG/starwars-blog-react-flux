@@ -16,7 +16,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 			getPeople: () => {
-				fetch("https://rickandmortyapi.com/api/character")
+				fetch("https://swapi.dev/api/people")
 					.then(response => response.json())
 					.then(result => setStore({ people: result }))
 					.catch(error => console.log('error', error));

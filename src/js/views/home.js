@@ -21,7 +21,7 @@ export const Home = () => {
 							height="350" />
 						<div className="card-body">
 							<h5 className="card-title">Characters</h5>
-							<p className="card-text">“Sometimes science is more art than science.” — Rick</p>
+							<p className="card-text">Do you feel the force?</p>
 							<Link to="/Characters">
 								<button type="button" class="btn btn-primary">Primary</button>
 							</Link>
@@ -51,9 +51,11 @@ export const Home = () => {
 					<div className="card h-100" >
 						<img src="..." className="card-img-top" alt="..." />
 						<div className="card-body">
-							<h5 className="card-title">Characters</h5>
+							<h5 className="card-title">Planets</h5>
 							<p className="card-text">Do you feel the force?</p>
-							<a href="#" className="btn btn-primary"></a>
+							<Link to="/Planets">
+								<button type="button" class="btn btn-primary">Primary</button>
+							</Link>
 						</div>
 					</div>
 				</div>
@@ -63,7 +65,6 @@ export const Home = () => {
 						<div className="card-body">
 							<h5 className="card-title">Vehicles</h5>
 							<p className="card-text">Look at that speeder...</p>
-							<a href="#" className="btn btn-primary"></a>
 						</div>
 					</div>
 				</div>

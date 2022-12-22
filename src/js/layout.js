@@ -10,6 +10,8 @@ import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import Characters from "./views/Characters";
 import Vehicles from "./views/Vehicles";
+import PlanetSingle from "./views/PlanetSingle";
+import Planets from "./views/Planets";
 
 //create your first component
 const Layout = () => {
@@ -38,6 +40,12 @@ const Layout = () => {
 						
 						<Route exact path="/single/:theid">
 							<Single />
+						</Route>
+						<Route exact path="/Planets">
+							<Planets />
+						</Route>
+						<Route exact path="/Planetsingle">
+							<PlanetSingle />
 						</Route>
 						<Route>
 							<h1>Not found!</h1>
