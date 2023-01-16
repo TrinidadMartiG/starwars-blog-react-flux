@@ -2,46 +2,46 @@ import React, { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 
-let CharacterSingle = () => {
+let SingleVehicle = () => {
     const { store, actions } = useContext(Context)
-    console.log("single", store.singlepeople)
+    console.log("single", store.singlevehicle)
     const baseImgUrl = "https://starwars-visualguide.com/assets/img/"
 
     return (
         <>
-            {store.singlepeople.uid ?
+            {store.singlevehicle.uid?
                 <div className="card mb-3 mx-auto" style={{ maxWidth: "1200px" }}>
                     <div className="row g-0">
                         <div className="col-md-4">
-                            <img src={baseImgUrl + 'characters/' + store.singlepeople.uid + '.jpg'} className="img-fluid rounded-start" alt="..." />
+                            <img src={baseImgUrl + 'vehicles/'+ store.singlevehicle.uid + '.jpg'} className="img-fluid rounded-start" alt="..." />
                         </div>
                         <div className="col-md-8">
                             <div className="card-body">
-                                <h5 className="card-title">{store.singlepeople.properties.name}</h5>
+                                <h5 className="card-title">{store.singlevehicle.properties.name}</h5>
                                 <hr />
                                 <p className="card-text">
-                                    Gender: {store.singlepeople.properties.gender}
+                                    Model: {store.singlevehicle.properties.model}
                                 </p>
                                 <p className="card-text">
-                                    Height: {store.singlepeople.properties.height}
+                                    Vehicle Class: {store.singlevehicle.properties.vehicle_class}
                                 </p>
                                 <p className="card-text">
-                                    Mass: {store.singlepeople.properties.mass}
+                                    Manufacturer: {store.singlevehicle.properties.manufacturer}
                                 </p>
                                 <p className="card-text">
-                                    Hair Color: {store.singlepeople.properties.hair_color}
+                                    Lenght: {store.singlevehicle.properties.length}
                                 </p>
                                 <p className="card-text">
-                                    Skin Color: {store.singlepeople.properties.skin_color}
+                                    Crew: {store.singlevehicle.properties.crew}
                                 </p>
                                 <p className="card-text">
-                                    Eye Color: {store.singlepeople.properties.eye_color}
+                                    Max Atmosphering Speed: {store.singlevehicle.properties.max_atmosphering_speed} km/h
                                 </p>
                                 <p className="card-text">
-                                    Birth Year: {store.singlepeople.properties.birth_year}
+                                    Consumables: {store.singlevehicle.properties.consumables}
                                 </p>
                                 <button className="btn btn-primary">
-                                    <Link to="/characters">
+                                    <Link to="/vehicles">
                                         Go Back</Link>
                                 </button>
                             </div>
@@ -59,4 +59,4 @@ let CharacterSingle = () => {
 
 
 
-export default CharacterSingle;
+export default SingleVehicle;

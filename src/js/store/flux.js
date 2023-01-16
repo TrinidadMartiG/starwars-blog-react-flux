@@ -1,45 +1,63 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
+			baseImgUrl: "https://starwars-visualguide.com/assets/img/",
+			baseUrl: "https://www.swapi.tech/api/",
 			likes: 0,
 			people: null,
 			vehicles: null,
 			planets: null,
-			species: null
+			favorites: [],
+			singlepeople: {},
+			singlevehicle: {},
+			singleplanet: {},
 		},
-
-
 		actions: {
-			addLike: () => {
-				const like = getStore().likes
-				setStore({ likes: like + 1 })
+			addFavorites: (favorite) => {
+				const newFavorites = getStore().favorites
+				newFavorites.push(favorite)
+				setStore({ favorites: newFavorites })
 			},
-
+			deleteFavorite: (favoriteToRemove) => {
+				const { favorites } = getStore();
+				const newFavorites = favorites.filter(favorite => favorite !== favoriteToRemove)
+				setStore({ favorites: newFavorites })
+			},
 			getPeople: () => {
-				fetch("https://swapi.dev/api/people")
+				fetch("https://www.swapi.tech/api/people")
 					.then(response => response.json())
 					.then(result => setStore({ people: result }))
 					.catch(error => console.log('error', error));
 			},
-
+			getSinglePeople: (peopleUrl) => {
+				fetch(peopleUrl)
+					.then(res => res.json())
+					.then(data => setStore({ singlepeople: data.result }))
+					.catch(err => console.error(err))
+			},
+			getSingleVehicle: (VehicleUrl) => {
+				fetch(VehicleUrl)
+					.then(res => res.json())
+					.then(data => setStore({ singlevehicle: data.result }))
+					.catch(err => console.error(err))
+			},
+			getSinglePlanet: (PlanetUrl) => {
+				fetch(PlanetUrl)
+					.then(res => res.json())
+					.then(data => setStore({ singleplanet: data.result }))
+					.catch(err => console.error(err))
+			},
 			getVehicles: () => {
-				fetch("https://swapi.dev/api/vehicles")
+				fetch("https://swapi.tech/api/vehicles")
 					.then(response => response.json())
 					.then(result => setStore({ vehicles: result }))
 					.catch(error => console.log('error', error));
 			},
 
 			getPlanets: () => {
-				fetch("https://swapi.dev/api/planets")
+				fetch("https://swapi.tech/api/planets")
 					.then(response => response.json())
 					.then(result => setStore({ planets: result }))
-					.catch(error => console.log('error', error));
-			},	
-			
-			getSpecies: () => {
-				fetch("https://swapi.dev/api/species")
-					.then(response => response.json())
-					.then(result => setStore({ species: result }))
 					.catch(error => console.log('error', error));
 			},
 		},
