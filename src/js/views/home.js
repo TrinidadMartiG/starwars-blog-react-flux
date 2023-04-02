@@ -58,11 +58,6 @@ export const Home = () => {
 					</div>
 				</div>
 			</div>
-
-			<button className="btn btn-success" onClick={() => {
-				actions.addLike()
-			}}>Plus one {store.likes}
-			</button>
 		</div>
 	)
 };
