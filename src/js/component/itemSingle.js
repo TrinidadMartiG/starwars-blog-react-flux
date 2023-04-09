@@ -19,7 +19,7 @@ let ItemSingle = (props) => {
                             <div className="card-body">
                                 <h5 className="card-title">{props.title}</h5>
                                 
-                                <button className="btn btn-primary">
+                                <button className="btn btn-warning">
                                     <Link to="/">
                                         Go Back</Link>
                                 </button>

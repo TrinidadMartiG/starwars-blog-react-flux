@@ -40,7 +40,7 @@ let SingleVehicle = () => {
                                 <p className="card-text">
                                     Consumables: {store.singlevehicle.properties.consumables}
                                 </p>
-                                <button className="btn btn-primary">
+                                <button className="btn btn-warning">
                                     <Link to="/vehicles">
                                         Go Back</Link>
                                 </button>

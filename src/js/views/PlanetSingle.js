@@ -37,7 +37,7 @@ let PlanetSingle = () => {
                                 <p className="card-text">
                                     Terrain: {store.singleplanet.properties.terrain}
                                 </p>
-                                <button className="btn btn-primary">
+                                <button className="btn btn-warning">
                                     <Link to="/planets">
                                         Go Back</Link>
                                 </button>

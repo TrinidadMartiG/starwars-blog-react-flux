@@ -40,7 +40,7 @@ let CharacterSingle = () => {
                                 <p className="card-text">
                                     Birth Year: {store.singlepeople.properties.birth_year}
                                 </p>
-                                <button className="btn btn-primary">
+                                <button className="btn btn-warning">
                                     <Link to="/characters">
                                         Go Back</Link>
                                 </button>

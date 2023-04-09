@@ -23,7 +23,7 @@ let Planets = () => {
                                 </p>
                             </div>
                             <div className="d-flex justify-content-around">
-                            <button className="btn btn-primary" onClick={() => {
+                            <button className="btn btn-warning" onClick={() => {
                                 actions.getSinglePlanet(item.url)
                                 history.push('/planetsingle')
                             }}>

@@ -19,7 +19,7 @@ export const Home = () => {
 							<h5 className="card-title">Characters</h5>
 							<p className="card-text">Do you feel the force?</p>
 							<Link to="/Characters">
-								<button type="button" class="btn btn-primary">See more!</button>
+								<button type="button" class="btn btn-warning">See more!</button>
 							</Link>
 
 						</div>
@@ -35,7 +35,7 @@ export const Home = () => {
 							<h5 className="card-title">Vehicles</h5>
 							<p className="card-text">Look at that speeder...</p>
 							<Link to="/Vehicles">
-								<button type="button" class="btn btn-primary">See more!</button>
+								<button type="button" class="btn btn-warning">See more!</button>
 							</Link>
 
 						</div>
@@ -52,7 +52,7 @@ export const Home = () => {
 							<h5 className="card-title">Planets</h5>
 							<p className="card-text"></p>
 							<Link to="/Planets">
-								<button type="button" class="btn btn-primary">See more!</button>
+								<button type="button" class="btn btn-warning">See more!</button>
 							</Link>
 						</div>
 					</div>

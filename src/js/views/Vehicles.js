@@ -20,7 +20,7 @@ let Vehicles = () => {
 
                         </div>
                         <div className="d-flex justify-content-around">
-                            <button className="btn btn-primary" onClick={() => {
+                            <button className="btn btn-warning" onClick={() => {
                                 actions.getSingleVehicle(item.url)
                                 history.push('/SingleVehicle')
                             }}>
