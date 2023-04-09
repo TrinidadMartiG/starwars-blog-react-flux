@@ -5,3 +5,7 @@ body{
 background: black;
 }
 
+a {
+    color: inherit;
+    text-decoration: inherit;
+  }
