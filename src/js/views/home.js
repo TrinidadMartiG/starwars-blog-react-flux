@@ -7,7 +7,7 @@ export const Home = () => {
 	const { store, actions } = useContext(Context)
 
 	return (
-		<div className="container-fluid text-center bg-dark">
+		<div className="container-fluid text-center bg-dark my-3">
 
 			<div className="row m-5">
 				<div className="col justify-content-center my-5">

@@ -18,12 +18,11 @@ export const Navbar = () => {
 
 		<nav className="navbar navbar-light mb-3" >
 			<div className="container-fluid" style={{
-				backgroundImage: 'url:("")'
 			}}>
 				<Link to="/">
 					<span className="navbar-link" id="navbar-link">Home</span>
 				</Link>
-				<h1 style={{color: "yellow"}}>STAR WARS</h1>
+				<h1 style={{color: "yellow"}}>STAR WARS WIKI</h1>
 				<div className="ml-auto">
 					
 					<div class="dropdown" role="group">
